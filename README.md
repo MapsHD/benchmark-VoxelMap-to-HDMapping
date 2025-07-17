@@ -1,4 +1,4 @@
-# LeGO-LOAM-converter
+# VoxelMap-converter
 
 ## Intended use 
 
