@@ -33,6 +33,7 @@ and start odometry:
 cd /test_ws/
 source ./devel/setup.sh # adjust to used shell
 roslaunch voxel_map mapping_velodyne.launch
+rosbag play *.bag --clock
 ```
 
 ## Usage - conversion:
