@@ -41,5 +41,5 @@ rosbag play *.bag --clock
 ```shell
 cd /test_ws/
 source ./devel/setup.sh # adjust to used shell
-rosrun voxelmap-to-hdmapping listener <recorded_bag> <output_dir>
+rosrun voxel-to-hdmapping listener <recorded_bag> <output_dir>
 ```
