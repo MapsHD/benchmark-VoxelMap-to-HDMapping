@@ -55,14 +55,11 @@ WORKDIR /ros_ws
 COPY ./src ./src
 
 RUN sed -i \
-    -e 's|lid_topic:.*|lid_topic:  "/livox/lidar"|' \
-    -e 's|imu_topic:.*|imu_topic:  "/livox/imu"|' \
-    -e 's|lidar_type:.*|lidar_type: 1|' \
     -e 's/pub_voxel_map:.*/pub_voxel_map: true/' \
     -e 's/pub_point_cloud:.*/pub_point_cloud: true/' \
     -e 's/dense_map_enable:.*/dense_map_enable: true/' \
     src/VoxelMap/config/velodyne.yaml
-    
+
 RUN source /opt/ros/noetic/setup.bash && \
     source /ws_livox/devel/setup.bash && \
     catkin_make
